@@ -1,3 +1,5 @@
 .idea/
 venv/
+*.pyo
+*.pyc
 problem-statement.pdf

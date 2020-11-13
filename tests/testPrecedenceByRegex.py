@@ -48,6 +48,14 @@ class TestSemVerPrecedence(unittest.TestCase):
         result = determinePrecedence("9.9.9", "11.11.11")
         self.assertEqual(result, False)
 
+    def testExactSameVersionWithMultipleHyphensInPreRelease(self):
+        result = determinePrecedence("10.10.10-alpha-test-test-1.3", "10.10.10")
+        self.assertEqual(result, False)
+
+    def testExactSameVersionWithMultipleHyphensInPreReleaseInLowest(self):
+        result = determinePrecedence("10.10.10", "10.10.10-alpha-test-test-1.3")
+        self.assertEqual(result, True)
+
 
 if __name__ == '__main__':
     unittest.main()
