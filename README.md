@@ -37,9 +37,9 @@ Using string manipulation:
 from SymVerPrecedence.precedenceByStringManipulation import determinePrecedence
 ``` 
 
-Using string manipulation:
+Using regular expression:
 ```
-from SymVerPrecedence.precedenceByStringManipulation import determinePrecedence
+from SymVerPrecedence.precedenceByRegex import determinePrecedence
 ``` 
 
 An example using the Python interpreter in a terminal:
